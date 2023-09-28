@@ -1,0 +1,1 @@
+# Amharic-Computer-Commands-Recognition-Model-Using-CNN-and-LSTM
