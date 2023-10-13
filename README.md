@@ -18,15 +18,8 @@
 | 13. በመጠን ደርድር  | Sort-by-size  | 27.	ካሜራ ክፈት  | 	Open the camera  |   |   |
 |  14. በስም ደርድር  |Sort-by-name   | 28.	ካሜራ ዝጋ  | Close the camera  |   |   |
 
-	
- 
-	
+## <b>Data Collection</b>
+To develop a model, the required type of data is audio or voice. The voice data is collected using smartphones via voice recorder applications. The built model is speaker-independent, which means it can recognize speech commands regardless of the speaker. So, to solve acoustic-related problems (such as accents and pronunciations), the voices are collected from 35 different Amharic language speakers (20 males and 15 females in the age range of 21-28) at least five times per command. The speech commands are recorded at a sample rate of 16kHhz with the mono channel and then they are stored in .wav audio file format. Most of the voices are recorded in less-noisy environments (i.e. at home and the office, because the acoustic environment and transduction equipment have a great effect). A total of 7000 voices have been collected (all voices are recorded using mobile phones).
 
-	
-	
-	
-	
-	
-
-	
-	
+To feed data to the CNN and LSTm models, two audio features (MFCCs and Mel-Spectrogram) are extracted from the raw audio files.
+These two features 
