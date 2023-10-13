@@ -23,7 +23,7 @@ To develop a model, the required type of data is audio or voice. The voice data 
 <br>
 In this study, a 16kHz sampling rate is used so that each voice has a total of 32,000 samples. The maximum length or duration of the speech commands is 2 seconds (all Speakers have finished below 2 seconds) so that the content speech of the first 2 seconds of the speech is considered
 
-##<b> Feature Extraction: </b>
+## <b> Feature Extraction: </b>
 To feed data to the CNN and LSTm models, two audio features ( <b> MFCCs and Mel-Spectrogram </b>) are extracted from the raw audio files.
 ### Mel-spectrogram
 Mel spectrogram is the combination of Mel-Scale + Spectrogram, Mel scale is the logarithmic transformation of an audio signal’s frequency. The idea behind the Mel scale transformation is that an audio signal with equal distance in the Mel scale is perceived to be equal distance by humans. A spectrogram is a visual representation of the "loudness" or signal strength over time at different frequencies contained in a specific waveform.
