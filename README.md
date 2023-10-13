@@ -49,6 +49,7 @@ To solve this problem, a method called windowing helps to eliminate the disconti
 After applying the Hanning windowing function, the endpoint of each frame is eliminated. However, these endpoints are lost and some of the contents of the audio are lost.
 The solution is to take overlapping frames and overlap some (or half of a frame sample size is recommended) parts of the frame with the next frame to get the lost information at the endpoint of each frame due to applying the windowing function.
 <br/>
+
 Hop length is the number of samples considered before taking the next frame. In this study, a frame size of 480 samples with 240 overlapping samples (15ms overlapping in each frame) samples is used to divide the signals into an equal number of frames or segments. The total number of frames can be calculated using the following formula.
 <ul>
  <li> Total number of frames=  (Total samples per second)/(hop-length)  +1, for 1second voice signal </li> 
