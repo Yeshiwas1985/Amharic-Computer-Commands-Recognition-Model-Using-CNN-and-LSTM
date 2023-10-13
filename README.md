@@ -51,7 +51,6 @@ The solution is to take overlapping frames and overlap some (or half of a frame 
 <br/>
 Hop length is the number of samples considered before taking the next frame. In this study, a frame size of 480 samples with 240 overlapping samples (15ms overlapping in each frame) samples is used to divide the signals into an equal number of frames or segments. The total number of frames can be calculated using the following formula.
 <ul>
- <li> Equation 3.1: Formula to calculate the total number of frames </li> 
  <li> Total number of frames=  (Total samples per second)/(hop-length)  +1, for 1second voice signal </li> 
  <li> Total number of frames=( (Total samples per second)/(hop-length))*2 +1, for 2 seconds voice signal.  Total number of frames=(16,000/240)*2 +1 = 134.  </li> 
 </ul>
