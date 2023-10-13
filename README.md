@@ -45,3 +45,16 @@ In this study, a 30ms frame size is used (each frame has 480 samples) and each v
 There is one major problem that may happen when dividing the voice signals into equal parts or frames, which is called spectral leakage. Endpoints in each frame are discontinuous, these discontinuities appear as high-frequency components but are not present in the original signal.
 <br>
 To solve this problem, a method called windowing helps to eliminate the discontinuous samples at both ends of a frame. The popular windowing function used by different audio processing tools is called the “Hanning” window.
+<br/<
+After applying the Hanning windowing function, the endpoint of each frame is eliminated. However, these endpoints are lost and some of the contents of the audio are lost.
+The solution is to take overlapping frames and overlap some (or half of a frame sample size is recommended) parts of the frame with the next frame to get the lost information at the endpoint of each frame due to applying the windowing function.
+<br/>
+Hop length is the number of samples considered before taking the next frame. In this study, a frame size of 480 samples with 240 overlapping samples (15ms overlapping in each frame) samples is used to divide the signals into an equal number of frames or segments. The total number of frames can be calculated using the following formula.
+<ul>
+ <li> Equation 3.1: Formula to calculate the total number of frames </li> 
+ <li> Total number of frames=  (Total samples per second)/(hop-length)  +1, for 1second voice signal </li> 
+ <li> Total number of frames=( (Total samples per second)/(hop-length))*2 +1, for 2 seconds voice signal.  Total number of frames=(16,000/240)*2 +1 = 134.  </li> 
+</ul>
+
+So, there are a total number of 134 frames in each voice signal.
+
