@@ -32,9 +32,9 @@ Cepstrum: The Fourier transform of the logarithm of a speech power spectrum; use
 
 ## <b> Data processing:</b>
 The raw audio has continuous values, which is difficult for the machines to extract the features from the specified period. To extract the selected features from the speech signal, it must be divided into equal parts called frames. The following figure shows the raw voice signal that has a continuous value.
-<br>
+<br/>
 To get discrete values, the voice signal must be divided into equal segments which have an equal number of points or samples. This process is called framing. It is used to divide a longer-time signal into shorter segments (called frames) with equal length or duration (each frame has an equal number of samples) and used to know how these different frequency components of a signal are available over time. The recommended duration of each frame (window length) is 20ms-40ms.
-<br>
+<br/>
 In this study, a 30ms frame size is used (each frame has 480 samples) and each voice signal has a duration of 2 seconds with a 16kHz sampling rate, which means there are a total of 32,000 samples (2 × 16,000) per individual voice. <ul>
        <li> 2 seconds = 2,000ms, which means 32,000 samples have a total duration of 2,000ms. </li>
        <li> So that the number of samples each frame can contain:</li>
@@ -43,7 +43,7 @@ In this study, a 30ms frame size is used (each frame has 480 samples) and each v
         </ul>
         <br/>
 There is one major problem that may happen when dividing the voice signals into equal parts or frames, which is called spectral leakage. Endpoints in each frame are discontinuous, these discontinuities appear as high-frequency components but are not present in the original signal.
-<br>
+<br/>
 To solve this problem, a method called windowing helps to eliminate the discontinuous samples at both ends of a frame. The popular windowing function used by different audio processing tools is called the “Hanning” window.
 <br/>
 After applying the Hanning windowing function, the endpoint of each frame is eliminated. However, these endpoints are lost and some of the contents of the audio are lost.
