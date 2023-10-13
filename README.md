@@ -35,11 +35,13 @@ The raw audio has continuous values, which is difficult for the machines to extr
 <br>
 To get discrete values, the voice signal must be divided into equal segments which have an equal number of points or samples. This process is called framing. It is used to divide a longer-time signal into shorter segments (called frames) with equal length or duration (each frame has an equal number of samples) and used to know how these different frequency components of a signal are available over time. The recommended duration of each frame (window length) is 20ms-40ms.
 <br>
-In this study, a 30ms frame size is used (each frame has 480 samples) and each voice signal has a duration of 2 seconds with a 16kHz sampling rate, which means there are a total of 32,000 samples (2 × 16,000) per individual voice. 
-        2 seconds = 2,000ms, which means 32,000 samples have a total duration of 2,000ms.
-        So that the number of samples each frame can contain:
-        	((32,000 samples × 30ms) ∕ 2000ms))
-        	480 samples, each frame contains 480 samples.
+In this study, a 30ms frame size is used (each frame has 480 samples) and each voice signal has a duration of 2 seconds with a 16kHz sampling rate, which means there are a total of 32,000 samples (2 × 16,000) per individual voice. <ul>
+       <li> 2 seconds = 2,000ms, which means 32,000 samples have a total duration of 2,000ms. </li>
+       <li> So that the number of samples each frame can contain:</li>
+        <li>((32,000 samples × 30ms) ∕ 2000ms)) </li>
+        <li>480 samples, each frame contains 480 samples.</li>
+        </ul>
+        <br/>
 There is one major problem that may happen when dividing the voice signals into equal parts or frames, which is called spectral leakage. Endpoints in each frame are discontinuous, these discontinuities appear as high-frequency components but are not present in the original signal.
 <br>
 To solve this problem, a method called windowing helps to eliminate the discontinuous samples at both ends of a frame. The popular windowing function used by different audio processing tools is called the “Hanning” window.
