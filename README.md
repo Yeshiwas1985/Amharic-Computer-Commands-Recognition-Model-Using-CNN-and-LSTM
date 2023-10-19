@@ -58,4 +58,4 @@ Hop length is the number of samples considered before taking the next frame. In 
 
 So, there are a total number of 134 frames in each voice signal.
 
-## <b> N.B: if you need a dataset, contact me using this mail address </b> <a> yeshiwasdagnaw23@gmail.com </a>
+## <b> N.B: if you need a dataset, contact me using LinkedIn </b> <a> linkedin.com/in/yeshiwas-dagnaw-alemu-961318172 </a>
